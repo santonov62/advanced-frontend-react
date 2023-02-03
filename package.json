@@ -2,7 +2,7 @@
   "name": "advanced-frontend-react",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "start": "webpack serve --env port=4444",
     "build:prod": "webpack --env mode=production",
