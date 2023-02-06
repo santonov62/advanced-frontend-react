@@ -13,6 +13,7 @@ export const Navbar = ({className}: NavbarProps) => {
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
             <ThemeSwitcher />
+            <div style={{flexGrow: 1}}></div>
             <AppLink theme={AppLinkTheme.SECONDARY} to={'/'}>Главная</AppLink>
             <AppLink theme={AppLinkTheme.IMPORTANT} to={'about'}>О сайте</AppLink>
         </div>
