@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import React, { useState } from 'react';
-import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
-import { LanguageSwitcher } from 'shared/ui/LanguageSwitcher';
+import { ThemeSwitcher } from 'features/ThemeSwitcher';
+import { LanguageSwitcher } from 'features/LanguageSwitcher';
 import { useTranslation } from 'react-i18next';
 import cls from './Sidebar.module.scss';
 
