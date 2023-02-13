@@ -18,7 +18,7 @@ export function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInsta
     ];
     if (isDev) {
         plugins.push(new webpack.HotModuleReplacementPlugin());
-        plugins.push(new ReactRefreshPlugin());
+        plugins.push(new ReactRefreshPlugin({ overlay: false }));
     }
     return plugins;
 }
