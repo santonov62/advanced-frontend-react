@@ -14,10 +14,10 @@ export const Navbar = ({ className }: NavbarProps) => {
         <div className={classNames(cls.navbar, {}, [className])}>
             <div style={{ flexGrow: 1 }} />
             <AppLink theme={AppLinkTheme.SECONDARY} to="/">
-                {t('Main page', { ns: 'main' })}
+                {t('Main page')}
             </AppLink>
             <AppLink theme={AppLinkTheme.IMPORTANT} to="about">
-                {t('About page', { ns: 'about' })}
+                {t('About page')}
             </AppLink>
         </div>
     );
