@@ -22,10 +22,33 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .link {
+        opacity: 0;
+        transition: 0.2s opacity;
+        width: 0;
+    }
 }
 
 .collapseBtn {
     position: absolute;
     right: -32px;
     bottom: 32px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 5px 10px;
+}
+
+.icon {
+    fill: var(--inverted-primary-color);
 }
