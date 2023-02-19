@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next';
 
 interface LanguageSwitcherProps {
     className?: string,
-    collapsed?: boolean,
+    short?: boolean,
 }
 
-export const LanguageSwitcher = ({ className, collapsed }: LanguageSwitcherProps) => {
+export const LanguageSwitcher = ({ className, short }: LanguageSwitcherProps) => {
     const { t, i18n } = useTranslation();
 
     const toggle = () => {
@@ -19,7 +19,7 @@ export const LanguageSwitcher = ({ className, collapsed }: LanguageSwitcherProps
             theme={ButtonTheme.CLEAR}
             onClick={toggle}
         >
-            {t(collapsed ? 'Язык сокращение' : 'Язык')}
+            {t(short ? 'Язык сокращение' : 'Язык')}
         </Button>
     );
 };
