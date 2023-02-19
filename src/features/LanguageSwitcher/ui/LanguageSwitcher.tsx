@@ -3,10 +3,11 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 
 interface LanguageSwitcherProps {
-    className?: string
+    className?: string,
+    collapsed?: boolean,
 }
 
-export const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
+export const LanguageSwitcher = ({ className, collapsed }: LanguageSwitcherProps) => {
     const { t, i18n } = useTranslation();
 
     const toggle = () => {
@@ -18,7 +19,7 @@ export const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
             theme={ButtonTheme.CLEAR}
             onClick={toggle}
         >
-            {t('Язык')}
+            {t(collapsed ? 'Язык сокращение' : 'Язык')}
         </Button>
     );
 };
