@@ -2,6 +2,8 @@
 node_modules
 /build
 /storybook-static
+.loki/report.html
+.loki/report.json
 
 package-lock.json
 npm-debug.log
