@@ -25,10 +25,16 @@ export default ({ config }: {config: webpack.Configuration}) => {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
     });
+    config.module.rules.push({
+        test: /\.{tsx,ts}?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+    });
     config.plugins.push(
         new webpack.DefinePlugin({
             __IS_DEV__: false,
         }),
     );
+
     return config;
 };
