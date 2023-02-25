@@ -10,7 +10,9 @@ export default ({ config }: {config: webpack.Configuration}) => {
         html: '',
         src: path.resolve(__dirname, '..', '..', 'src'),
     };
+    console.log('!!!!!!', paths.src);
     config.resolve.modules.push(paths.src);
+    config.resolve.modules.push('node_modules');
     config.resolve.extensions.push('.ts', '.tsx');
     config.module.rules.push(buildCssLoaders(true));
 
@@ -24,11 +26,6 @@ export default ({ config }: {config: webpack.Configuration}) => {
     config.module.rules.push({
         test: /\.svg$/,
         use: ['@svgr/webpack'],
-    });
-    config.module.rules.push({
-        test: /\.{tsx,ts}?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
     });
     config.plugins.push(
         new webpack.DefinePlugin({
