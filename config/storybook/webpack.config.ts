@@ -30,8 +30,5 @@ export default ({ config }: {config: webpack.Configuration}) => {
             __IS_DEV__: false,
         }),
     );
-    config.resolve.alias = {
-        entities: path.resolve(__dirname, '..', '..', 'src', 'entities'),
-    };
     return config;
 };
