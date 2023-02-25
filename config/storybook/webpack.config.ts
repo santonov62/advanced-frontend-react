@@ -12,7 +12,6 @@ export default ({ config }: {config: webpack.Configuration}) => {
     };
     console.log('!!!!!!', paths.src);
     config.resolve.modules.push(paths.src);
-    config.resolve.modules.push('node_modules');
     config.resolve.extensions.push('.ts', '.tsx');
     config.module.rules.push(buildCssLoaders(true));
 
