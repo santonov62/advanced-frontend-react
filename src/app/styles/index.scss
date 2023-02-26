@@ -3,7 +3,8 @@
 @import "./variables/global";
 @import "reset";
 
-:root {
+.app,
+.app-modal {
     font: var(--font-m);
 }
 
