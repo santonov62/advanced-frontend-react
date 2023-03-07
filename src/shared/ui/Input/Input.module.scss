@@ -1,0 +1,14 @@
+.inputWrapper {
+    display: flex;
+    flex-direction: row;
+
+    .input {
+        width: 100%;
+    }
+
+    .placeholder {
+        min-width: 130px;
+        text-align: right;
+        padding-right: 10px;
+    }
+}
