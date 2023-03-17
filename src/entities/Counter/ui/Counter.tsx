@@ -2,16 +2,16 @@ import { Button } from 'shared/ui/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
-import { CounterActions } from '../model/slice/CounterSlice';
+import { counterActions } from '../model/slice/CounterSlice';
 
 export const Counter = () => {
     const dispatch = useDispatch();
     const counterValue = useSelector(getCounterValue);
     const increment = () => {
-        dispatch(CounterActions.increment());
+        dispatch(counterActions.increment());
     };
     const decrement = () => {
-        dispatch(CounterActions.decrement());
+        dispatch(counterActions.decrement());
     };
     const { t } = useTranslation();
     return (
