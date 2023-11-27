@@ -1,7 +1,10 @@
 {
   "About page": "О нас",
+  "Authorization form": "Форма авторизации",
+  "Login": "Логин",
   "Main page": "Главная",
   "Page not found": "Страницы не существует",
+  "Password": "Пароль",
   "Reload Page": "Обновить страницу",
   "Something wrong": "Что-то не так",
   "toggle": "Переключить",

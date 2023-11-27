@@ -3,6 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 import { Input } from 'shared/ui/Input/Input';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useDispatch, useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
@@ -35,15 +36,16 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
 
     return (
         <div className={classNames(cls.loginForm, {}, [className])}>
-            {!!error && <div>{error}</div>}
+            <Text title={t('Authorization form')} />
+            {!!error && <Text text={error} theme={TextTheme.ERROR} />}
             <Input
-                placeholder={t('Логин')}
+                placeholder={t('Login')}
                 autofocus
                 onChange={onUsernameChange}
                 value={username}
             />
             <Input
-                placeholder={t('Пароль')}
+                placeholder={t('Password')}
                 onChange={onPasswordChange}
                 value={password}
             />
