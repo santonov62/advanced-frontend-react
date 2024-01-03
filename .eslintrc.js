@@ -8,6 +8,7 @@ module.exports = {
         'plugin:react/recommended',
         'airbnb',
         'plugin:i18next/recommended',
+        'plugin:@typescript-eslint/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -32,7 +33,8 @@ module.exports = {
         }],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
-        'no-unused-vars': 'warn',
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': 'error',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'off',
@@ -46,7 +48,7 @@ module.exports = {
             onlyAttribute: [''],
         }],
         'max-len': ['error', {
-            code: 100,
+            code: 120,
             ignoreComments: true,
         }],
         'jsx-a11y/no-static-element-interactions': 'off',
