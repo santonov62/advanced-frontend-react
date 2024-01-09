@@ -17,7 +17,7 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, {rej
             });
             const { data } = response;
             if (!data) {
-                throw new Error('Пользователь не найден');
+                throw new Error('Error');
             }
 
             localStorage.setItem(USER_LOACALSTORAGE_KEY, JSON.stringify(data));
@@ -25,7 +25,6 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, {rej
 
             return data;
         } catch (e) {
-            window.console.log(e);
             return thunkAPI.rejectWithValue(e.message);
         }
     },
