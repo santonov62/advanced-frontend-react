@@ -28,17 +28,6 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const password = useSelector(getLoginPassword);
     const isLoading = useSelector(getLoginIsLoading);
     const error = useSelector(getLoginError);
-    // const store = useStore() as ReduxStoreWithManager;
-
-    // useEffect(() => {
-    //     store.reducerManager.add('loginFrom', loginReducer);
-    //     dispatch({ type: '@INIT login form reducer' });
-    //     return () => {
-    //         dispatch({ type: '@DESTROY login form reducer' });
-    //         store.reducerManager.remove('loginFrom');
-    //     };
-    //     // eslint-disable-next-line
-    // }, []);
 
     const onUsernameChange = useCallback((value: string) => {
         dispatch(loginActions.setUsername(value));
