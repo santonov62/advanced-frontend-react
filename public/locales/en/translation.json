@@ -1,15 +1,15 @@
 {
-  "О нас": "About",
-  "Профиль": "Profile",
   "Authorization form": "Authorization form",
   "Login": "Login",
-  "Главная": "Main",
   "Page not found": "Page not found",
   "Password": "Password",
   "Reload Page": "Reload Page",
   "Something wrong": "Something wrong",
   "toggle": "Toggle",
   "Войти": "Enter",
+  "Главная": "Main",
+  "О нас": "About",
+  "Профиль": "Profile",
   "Тест": "Test",
   "Язык": "Russian",
   "Язык сокращение": "RU"
