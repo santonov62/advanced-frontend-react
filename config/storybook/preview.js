@@ -17,5 +17,5 @@ export const parameters = {
 
 addDecorator(StyleDecorator);
 addDecorator(ThemeDecorator(Theme.LIGHT));
-addDecorator(RouterDecorator);
 addDecorator(StoreDecorator({ loginFrom: { username: 'admin', password: '123' } }));
+addDecorator(RouterDecorator);
